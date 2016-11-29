@@ -1,0 +1,1 @@
+include ':app', ':backend', ':junit-4.4'
