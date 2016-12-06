@@ -17,7 +17,7 @@ import com.example.miquelynhollingsworth.myapplication.backend.service.LoginServ
 
 @WebServlet("/loginServlet")
 public class LoginServlet extends HttpServlet {
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
+    /*public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         String username = request.getParameter("username");
@@ -33,6 +33,6 @@ public class LoginServlet extends HttpServlet {
             //connect error on android app
             response.sendRedirect("error.jsp");
         }
-    }
+    }*/
 
 }

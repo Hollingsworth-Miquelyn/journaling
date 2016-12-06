@@ -1,44 +1,53 @@
 package com.example.miquelynhollingsworth.myapplication.backend.model;
 
-import java.io.Serializable;
+import java.util.Set;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="USER_TABLE")
-public class User implements Serializable {
+@Table(name = "USER")
+public class User {
 
-    @Id @GeneratedValue
-    private Long id;
+
+    @Id
+    @GeneratedValue
+    @Column(name = "USER_ID")
+    private int userID;
+
+    @Column(name = "FIRST_NAME")
     private String firstName;
-    private String middleName;
+
+    @Column(name = "LAST_NAME")
     private String lastName;
+
+    @Column(name = "UNAME")
+    private String username;
+
+    @Column(name = "EMAIL")
     private String email;
-    private String userId;
+
+    @Column(name = "PASSWORD")
     private String password;
 
-    public User() {
+    @Column(name = "PHONE_NUMBER")
+    private String phone;
+
+    @OneToMany(mappedBy = "user")
+    private Set<Entry> entries;
+
+
+
+    public int getUserID() {
+        return userID;
     }
 
-
-    public User(String firstName, String middleName, String lastName, String email, String userId, String password) {
-        this.firstName = firstName;
-        this.middleName = middleName;
-        this.lastName = lastName;
-        this.email = email;
-        this.userId = userId;
-        this.password = password;
-    }
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
 
     public String getFirstName() {
@@ -49,20 +58,20 @@ public class User implements Serializable {
         this.firstName = firstName;
     }
 
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
-
     public String getLastName() {
         return lastName;
     }
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
@@ -73,14 +82,6 @@ public class User implements Serializable {
         this.email = email;
     }
 
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -88,4 +89,13 @@ public class User implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
 }

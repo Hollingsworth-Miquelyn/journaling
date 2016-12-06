@@ -21,7 +21,7 @@ public class RegisterServlet extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public RegisterServlet() {
+    /*public RegisterServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,7 +29,7 @@ public class RegisterServlet extends HttpServlet {
     /**
      * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
      */
-    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    /*protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stub
         PrintWriter printWriter = response.getWriter();
         printWriter.println("Sample Page !");
@@ -38,14 +38,14 @@ public class RegisterServlet extends HttpServlet {
     /**
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    /*protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stud
     }
 
     /**
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
+   /* public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
@@ -64,5 +64,5 @@ public class RegisterServlet extends HttpServlet {
         } finally {
             out.close();
         }
-    }
+    }*/
 }

@@ -1,6 +1,6 @@
 package com.example.miquelynhollingsworth.myapplication.backend.service;
 
-import org.hibernate.query.Query;
+//import org.hibernate.query.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -9,7 +9,7 @@ import com.example.miquelynhollingsworth.myapplication.backend.model.Users;
 
 public class RegisterService {
 
-    public boolean register(Users user){
+   /* public boolean register(Users user){
         Session session = HibernateUtil.openSession();
         if(isUserExists(user)) return false;
 
@@ -49,5 +49,5 @@ public class RegisterService {
             session.close();
         }
         return result;
-    }
+    }*/
 }

@@ -2,7 +2,7 @@ package com.example.miquelynhollingsworth.myapplication.backend.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.hibernate.query.Query;
+//import org.hibernate.query.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -11,7 +11,7 @@ import com.example.miquelynhollingsworth.myapplication.backend.model.Users;
 
 public class LoginService {
 
-    public boolean authenticateUser(String username, String password) {
+    /*public boolean authenticateUser(String username, String password) {
         Users user = getUserByUsername(username);
         if(user!=null && user.getUsername().equals(username) && user.getPassword().equals(password)){
             return true;
@@ -59,5 +59,5 @@ public class LoginService {
             session.close();
         }
         return list;
-    }
+    }*/
 }
