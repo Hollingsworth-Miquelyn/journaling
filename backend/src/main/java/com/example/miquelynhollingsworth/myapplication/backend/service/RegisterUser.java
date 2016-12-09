@@ -10,6 +10,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import java.util.List;
 
@@ -22,7 +25,7 @@ public class RegisterUser {
         //TODO Auto-generated constructor stub
     }
 
-    public void set(String jsonUser){
+    public void set(String jsonUser) {
         registerUser = jsonUser;
     }
 
@@ -35,13 +38,30 @@ public class RegisterUser {
     @SuppressWarnings("unchecked")
     public static void main(String[] args) {
 
-        User user1 = new User ("Miquelyn", "Hollingsworth", "miquelyn", "miquelyn@email.com", "password", "1234567890");
+        JSONObject user = new JSONObject();
+        user.put("First", "Miquelyn");
+        user.put("Last", "Hollingsworth");
+        user.put("Username", "miq");
+        user.put("Email", "miq@email.com");
+        user.put("Phone", "123-456-7890");
+        user.put("Password", "pass");
+
+        String jsonUser = user.toString();
+
+        User user1 = new User("Miquelyn", "Hollingsworth", "miquelyn", "miquelyn@email.com", "password", "1234567890");
+
 
         System.out.println(" =======READ =======");
 
-        /*String u = args[0];
-        RegisterUser user = new RegisterUser();
-        user.set(u);*/
+        System.out.println(user);
+        System.out.println(jsonUser);
+        System.out.println(user1);
+
+
+        String us = args[0];
+        RegisterUser userReg = new RegisterUser();
+        userReg.set(us);
+
 
         create(user1);
         System.out.println(" =======READ =======");
@@ -139,8 +159,6 @@ public class RegisterUser {
         session.close();
         System.out.println("Successfully deleted all users.");
     }
-
-
-    }
+}
 
 

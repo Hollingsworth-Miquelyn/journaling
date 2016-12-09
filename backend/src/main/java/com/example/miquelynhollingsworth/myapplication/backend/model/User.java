@@ -1,5 +1,7 @@
 package com.example.miquelynhollingsworth.myapplication.backend.model;
 
+import org.json.simple.JSONObject;
+
 import java.util.Set;
 
 import javax.persistence.Column;
