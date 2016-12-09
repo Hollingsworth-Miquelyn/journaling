@@ -1,7 +1,6 @@
 package com.example.miquelynhollingsworth.myapplication.backend.service;
 
 
-import com.example.miquelynhollingsworth.myapplication.backend.hibernate.util.HibernateUtil;
 import com.example.miquelynhollingsworth.myapplication.backend.model.User;
 
 
@@ -11,8 +10,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+
 
 import java.util.List;
 
