@@ -40,7 +40,24 @@ public class User {
     @OneToMany(mappedBy = "user")
     private Set<Entry> entries;
 
+    public User(Integer userId, String firstName, String lastName, String username, String email, String password, String phone){
+        this.userID = userId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.phone = phone;
+    }
 
+    public User(String firstName, String lastName, String username, String email, String password, String phone){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.phone = phone;
+    }
 
     public int getUserID() {
         return userID;
@@ -96,6 +113,12 @@ public class User {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    @Override
+    public String toString() {
+        return "User: " + this.userID + ", " + this.firstName + ", " + this.lastName + ", " +
+                this.username + ", " + this.email + ", " + this.password + ", " + this.phone;
     }
 
 }

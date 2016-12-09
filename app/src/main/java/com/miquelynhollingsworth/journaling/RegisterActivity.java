@@ -61,9 +61,10 @@ public class RegisterActivity extends AppCompatActivity {
         String jsonUser = user.toString();
         Log.d("TAG", jsonUser);
 
+       // String jsonUser = "Hello";
 
         RegisterUser registerUser = new RegisterUser();
-        registerUser.main(jsonUser);
+        registerUser.set(jsonUser);
 
         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
         startActivity(intent);
